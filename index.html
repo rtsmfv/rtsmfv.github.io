@@ -59,14 +59,6 @@
     </style>
 </head>
 <body>
-    <div class="modal" id="firstModal">
-        <div class="modal-content">
-            <p>hi jah! i think you already have an idea of what this is about and i know that i’m such a coward for deactivating after sending the link to u</p>
-            <div style="text-align: center;">
-                <button onclick="closeModal()">→</button>
-            </div>
-        </div>
-    </div>
     <script>
         // Create stars
         for (let i = 0; i < 100; i++) {
@@ -88,26 +80,73 @@
             document.getElementById('secondModal').classList.add('show');
         }
 
-        // Close second modal and show content box
+        // Close second modal and show third modal
         function closeSecondModal() {
             document.getElementById('secondModal').classList.remove('show');
-            document.getElementById('contentBox').style.display = 'flex';
+            document.getElementById('thirdModal').classList.add('show'); 
+        }
+
+        // Close third modal and show content box
+        function closeThirdModal() {
+            document.getElementById('thirdModal').classList.remove('show');
+            document.getElementById('fifthModal').classList.add('show');   
+        }
+
+         // Go back to previous modal
+         function goBackToFirstModal() {
+            document.getElementById('secondModal').classList.remove('show');
+            document.getElementById('firstModal').classList.add('show');
+        }
+
+        function goBackToSecondModal() {
+            document.getElementById('thirdModal').classList.remove('show');
+            document.getElementById('secondModal').classList.add('show');
+        }
+
+        function goBackToFirstModal2() {
+            document.getElementById('fifthModal').classList.remove('show');
+            document.getElementById('firstModal').classList.add('show');
         }
     </script>
+    <div class="modal" id="firstModal">
+        <div class="modal-content">
+            <h2>hi jah!</h2>
+            <p>i think you already have an idea of what this is about and i know that i’m such a coward for deactivating after sending the link to u</p>
+            <div style="text-align: center;">
+                <button onclick="closeModal()">→</button>
+            </div>
+        </div>
+    </div>
     <div class="modal" id="secondModal">
         <div class="modal-content">
-            <p>ok so before u read this long message of mine, i just want to let u know nga i’m doing this w/o expecting anything in return…😵</p>
+            <p>before u read this long message of mine, i just want to let u know nga i’m doing this w/o expecting anything in return…😵</p>
             <div style="text-align: center;">
+                <button onclick="goBackToFirstModal()">←</button>
                 <button onclick="closeSecondModal()">→</button>
             </div>
         </div>
     </div>
-    <div class="textbox" id="contentBox">
-        <p>aware ka naman guro nga i like you, right…? 😓 shhfhfhdhdh sorry way ko man gin-expect nga madevelop gid ang small crush ko simo nga nagstart sang araw ng lahi 😭😭😭 abi ko madula man dayon pero like sang gadugay nga gadugay na ta ga-talk as friends, damo man ko gakadiscover about simo and it’s like everything i learn abt u makes me admire u more 🫠 i’m so sorry if this will make things awkward between us… ahdhhd i’m just so confused about whether i should try confessing or just move on but i’m not rlly the type of person to leave things unsaid 😓 anyways… i genuinely enjoy spending time w u and i also hope you know nga i think you’re a vv admirable person (bisan daw buang ka kis a) 🫨 and even though i have a crush on you, i really treasure you as a friend so i hope we can stay as friends if u don’t feel the same, but it’s okay mn if nd mo keri 😅✌️ thanks sa time and advanced happy new year! :)
-        <br>
-        <br>
-        <a href="https://open.spotify.com/playlist/7seGk4dEm5oFVOxbNAKKHD?si=a74f2924b809479d">☆</a>
-        </p>
+    <div class="modal" id="thirdModal">
+        <div class="modal-content">
+             <p>aware ka naman guro nga i like you, right…? 😓 shhfhfhdhdh sorry way ko man gin-expect nga madevelop gid ang small crush ko simo nga nagstart sang araw ng lahi 😭😭😭 abi ko madula man dayon pero like sang gadugay nga gadugay na ta ga-talk as friends, damo man ko gakadiscover about simo and it’s like everything i learn abt u makes me admire u more 🫠 i’m so sorry if this will make things awkward between us… ahdhhd i’m just so confused about whether i should try confessing or just move on but i’m not rlly the type of person to leave things unsaid 😓 anyways… i genuinely enjoy spending time w u and i also hope you know nga i think you’re a vv admirable person (bisan daw buang ka kis a) 🫨 and even though i have a crush on you, i really treasure you as a friend so i hope we can stay as friends if u don’t feel the same, but it’s okay mn if nd mo keri 😅✌️ thanks sa time and advanced happy new year! :)
+             <br>
+             <div style="text-align: center; font-size: 175%;">
+             <a href="https://open.spotify.com/playlist/7seGk4dEm5oFVOxbNAKKHD?si=a74f2924b809479d">☆</a>
+             </div>
+             </p>
+             <div style="text-align: center;">    
+                <button onclick="goBackToSecondModal()">←</button>
+                <button onclick="closeThirdModal()">→</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="fifthModal">
+        <div class="modal-content">
+            <p>ps:</p>
+            <div style="text-align: center;">    
+            <button onclick="goBackToFirstModal2()">🏠︎</button>
+            </div>
+         </div>
     </div>
 </body>
 </html>
