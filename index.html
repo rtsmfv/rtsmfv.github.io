@@ -23,35 +23,34 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 300px;
-            height: 450px;
+            width: 80%;
+            height: auto;
             background: rgba(255, 255, 255, 0.8);
             border-radius: 25px;
             display: none;
             justify-content: center;
             align-items: center;
-            text-align: center;
+            text-align:justify;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             overflow-y: auto;
         }
         .modal {
-            position: fixed;
+            position: absolute;
             top: 0;
-            left: 0;
-            width: 100%;
+            left: 10%;
+            width: 80%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
             display: flex;
             justify-content: center;
             align-items: center;
             visibility: hidden;
         }
         .modal-content {
-            background: white;
+            background:  rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
-            text-align: center;
+            text-align: justify;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
         .modal.show {
@@ -60,10 +59,12 @@
     </style>
 </head>
 <body>
-    <div class="modal" id="alertModal">
+    <div class="modal" id="firstModal">
         <div class="modal-content">
-            <p>hi jah! so before u read this long message of mine (i hope u do), i just want to let u know nga i’m not rlly expecting to enter smth srs or wtv 😵</p>
-            <button onclick="closeModal()">Okay</button>
+            <p>hi jah! i think you already have an idea of what this is about and i know that i’m such a coward for deactivating after sending the link to u</p>
+            <div style="text-align: center;">
+                <button onclick="closeModal()">→</button>
+            </div>
         </div>
     </div>
     <script>
@@ -76,19 +77,36 @@
             document.body.appendChild(star);
         }
 
-        // Show modal on page load
+        // Show first modal on page load
         window.onload = function() {
-            document.getElementById('alertModal').classList.add('show');
+            document.getElementById('firstModal').classList.add('show');
         }
 
-        // Close modal function
+        // Close first modal and show second modal
         function closeModal() {
-            document.getElementById('alertModal').classList.remove('show');
+            document.getElementById('firstModal').classList.remove('show');
+            document.getElementById('secondModal').classList.add('show');
+        }
+
+        // Close second modal and show content box
+        function closeSecondModal() {
+            document.getElementById('secondModal').classList.remove('show');
             document.getElementById('contentBox').style.display = 'flex';
         }
     </script>
+    <div class="modal" id="secondModal">
+        <div class="modal-content">
+            <p>ok so before u read this long message of mine, i just want to let u know nga i’m doing this w/o expecting anything in return…😵</p>
+            <div style="text-align: center;">
+                <button onclick="closeSecondModal()">→</button>
+            </div>
+        </div>
+    </div>
     <div class="textbox" id="contentBox">
-        <p>aware ka naman guro nga i like you, right…? 😓 shhfhfhdhdh sorry way ko man gin-expect nga madevelop gid ang small crush ko simo nga nagstart sang araw ng lahi 😭😭😭 abi ko madula man dayon pero like sang gadugay nga gadugay na ta ga-talk as friends, damo man ko gakadiscover about simo and it’s like everything i learn abt u makes me admire u more 🫠 i’m so sorry if this will make things awkward between us… ahdhhd i’m just so confused about whether i should try confessing or just move on but i’m not rlly the type of person to leave things unsaid 😓 anyways… i genuinely enjoy spending time w u and i also hope you know nga i think you’re a vv admirable person (bisan daw buang ka kis a) 🫨 and even though i have a crush on you, i really treasure you as a friend so i hope we can stay as friends if u don’t feel the same, but it’s okay mn if nd mo keri 😅✌️ thanks sa time and advanced happy new year! :)</p>
+        <p>aware ka naman guro nga i like you, right…? 😓 shhfhfhdhdh sorry way ko man gin-expect nga madevelop gid ang small crush ko simo nga nagstart sang araw ng lahi 😭😭😭 abi ko madula man dayon pero like sang gadugay nga gadugay na ta ga-talk as friends, damo man ko gakadiscover about simo and it’s like everything i learn abt u makes me admire u more 🫠 i’m so sorry if this will make things awkward between us… ahdhhd i’m just so confused about whether i should try confessing or just move on but i’m not rlly the type of person to leave things unsaid 😓 anyways… i genuinely enjoy spending time w u and i also hope you know nga i think you’re a vv admirable person (bisan daw buang ka kis a) 🫨 and even though i have a crush on you, i really treasure you as a friend so i hope we can stay as friends if u don’t feel the same, but it’s okay mn if nd mo keri 😅✌️ thanks sa time and advanced happy new year! :)
+        <br>
+        <a href="https://open.spotify.com/playlist/7seGk4dEm5oFVOxbNAKKHD?si=a74f2924b809479d">☆</a>
+        </p>
     </div>
 </body>
 </html>
