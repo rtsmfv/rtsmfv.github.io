@@ -34,7 +34,7 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             overflow-y: auto;
-          }
+        }
         .modal {
             position: fixed;
             top: 0;
@@ -86,12 +86,24 @@
             document.getElementById('thirdModal').classList.add('show'); 
         }
 
-        // Close third modal and show content box
+        // Close third modal and show fourth modal
         function closeThirdModal() {
             document.getElementById('thirdModal').classList.remove('show');
-            document.getElementById('fifthModal').classList.add('show');   
+            document.getElementById('fourthModal').classList.add('show');   
         }
 
+        // Close fourth modal and show fifth modal
+        function closeFourthModal() {
+            document.getElementById('fourthModal').classList.remove('show');
+            document.getElementById('fifthModal').classList.add('show');   
+        }
+        
+        // Close fifth modal and show sixth modal
+        function closeFifthModal() {
+            document.getElementById('fifthModal').classList.remove('show');
+            document.getElementById('sixthModal').classList.add('show');   
+        }
+       
          // Go back to previous modal
          function goBackToFirstModal() {
             document.getElementById('secondModal').classList.remove('show');
@@ -103,8 +115,23 @@
             document.getElementById('secondModal').classList.add('show');
         }
 
-        function goBackToFirstModal2() {
+        function goBackToThirdModal() {
+            document.getElementById('fourthModal').classList.remove('show');
+            document.getElementById('thirdModal').classList.add('show');
+        }
+
+        function goBackToFourthModal() {
             document.getElementById('fifthModal').classList.remove('show');
+            document.getElementById('fourthModal').classList.add('show');
+        }
+
+        function goBackToFifthModal() {
+            document.getElementById('sixthModal').classList.remove('show');
+            document.getElementById('fifthModal').classList.add('show');
+        }
+
+        function goBackToFirstModal2() {
+            document.getElementById('sixthModal').classList.remove('show');
             document.getElementById('firstModal').classList.add('show');
         }
     </script>
@@ -140,11 +167,31 @@
             </div>
         </div>
     </div>
+    <div class="modal" id="fourthModal">
+        <div class="modal-content">
+            <p>ps: hahaha i hope indi super oa para simo ang fact nga nag-ubra gid ko webpage just to confess… (nalingaw ko ubra ka amo ni tho HAHAHA) </p>
+            <div style="text-align: center;">    
+                <button onclick="goBackToThirdModal()">←</button>
+                <button onclick="closeFourthModal()">→</button>
+            </div>
+         </div>
+    </div>
     <div class="modal" id="fifthModal">
         <div class="modal-content">
-            <p>ps:</p>
+            <p>pss: nagdeact ko kay nahuya ko oopz</p>
             <div style="text-align: center;">    
-            <button onclick="goBackToFirstModal2()">🏠︎</button>
+                <button onclick="goBackToFourthModal()">←</button>
+                <button onclick="closeFifthModal()">→</button>
+            </div>
+         </div>
+    </div>
+    <div class="modal" id="sixthModal">
+        <div class="modal-content">
+            <p>psss: pls don’t tell anyone sa room nga i made a webpage para mag-confess</p>
+            <p>(also ik nga karandom ka home button AHHAHAHA)</p>
+            <div style="text-align: center;">    
+                <button onclick="goBackToFifthModal()">←</button>
+                <button onclick="goBackToFirstModal2()">🏠︎</button>
             </div>
          </div>
     </div>
